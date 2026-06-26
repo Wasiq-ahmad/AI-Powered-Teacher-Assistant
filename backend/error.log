@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "E:\Teacher-Assistant\backend\app\api\routes\courses.py", line 239, in generate_course_for_class
+    quizzes_to_save = await asyncio.gather(*quiz_tasks)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Teacher-Assistant\backend\app\api\routes\courses.py", line 226, in generate_and_log_quiz
+    quiz_prompt = get_quiz_prompt(weeks_range, combined_text)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Teacher-Assistant\backend\app\services\teacher_agent.py", line 97, in get_quiz_prompt
+    return f"""
+           ^^^^
+ValueError: Invalid format specifier ' "Question?",
+    "options": ["Opt1","Opt2","Opt3","Opt4"],
+    "correct": "Opt2"
+  ' for object of type 'str'

@@ -1,6 +1,3 @@
-## Backend (rebuilt from `dumy_Backend`)
-
-This `backend/` project preserves the existing API behavior (routes, workflows, and data flow) while moving authentication to **Supabase Auth** and using **Supabase Postgres** as the database via async SQLAlchemy.
 
 ### Setup
 
@@ -51,10 +48,5 @@ uvicorn app.main:app --reload --port 8000
   - `POST /quizzes/student/submit`
   - `GET /quizzes/quiz/{quiz_id}/results`
 
-### Supabase schema
 
-This backend still uses the same table concepts as the original project:
-`professors`, `classes`, `courses`, `quizzes`, `quiz_links`, `quiz_attempts`.
-
-`professors.supabase_user_id` links a professor record to the Supabase Auth user id.
 
